@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BreathometerInterview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mT4-An-PCY">
+                                <rect key="frame" x="0.0" y="420" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dr6-WB-XrU"/>
+                                </constraints>
+                                <state key="normal" title="Get the Time"/>
+                                <connections>
+                                    <action selector="getTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIP-km-gwr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qs7-bc-ekt">
+                                <rect key="frame" x="-0.5" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qs7-bc-ekt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VEO-g9-u80"/>
+                            <constraint firstItem="qs7-bc-ekt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c55-lj-ayE"/>
+                            <constraint firstItem="qs7-bc-ekt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cM4-1b-2py"/>
+                            <constraint firstItem="mT4-An-PCY" firstAttribute="top" secondItem="qs7-bc-ekt" secondAttribute="bottom" constant="76" id="hrd-wF-ujd"/>
+                            <constraint firstItem="mT4-An-PCY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="l3N-dk-yht"/>
+                            <constraint firstItem="mT4-An-PCY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mfn-xE-LsY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getTimeButton" destination="mT4-An-PCY" id="gxD-Q3-uXa"/>
+                        <outlet property="timeLabel" destination="qs7-bc-ekt" id="Ujm-th-S9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
