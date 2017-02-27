@@ -10,16 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var purpleView: UIView!
+    @IBOutlet weak var redView: UIView!
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var brownView: UIView!
+    @IBOutlet weak var yellowView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // (purpleView, yellowView) = self.view
+        // (greenView, brownView) = redView
+        // (brownView, purpleView) = self.view
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
