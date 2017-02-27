@@ -21,36 +21,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mT4-An-PCY">
-                                <rect key="frame" x="0.0" y="420" width="375" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWM-V3-pZ6">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YzE-Cl-HAy">
+                                        <rect key="frame" x="139" y="22" width="93" height="84"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssb-Ux-obx">
+                                        <rect key="frame" x="8" y="22" width="93" height="84"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="D7S-z5-wo9"/>
+                                            <constraint firstAttribute="width" constant="93" id="py1-qf-Vx3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Dr6-WB-XrU"/>
+                                    <constraint firstAttribute="height" constant="128" id="LtL-cw-yG5"/>
+                                    <constraint firstItem="ssb-Ux-obx" firstAttribute="leading" secondItem="nWM-V3-pZ6" secondAttribute="leading" constant="8" id="Rsh-q7-y4Z"/>
+                                    <constraint firstItem="YzE-Cl-HAy" firstAttribute="width" secondItem="ssb-Ux-obx" secondAttribute="width" id="Xey-nK-ENd"/>
+                                    <constraint firstItem="YzE-Cl-HAy" firstAttribute="height" secondItem="ssb-Ux-obx" secondAttribute="height" id="be0-kW-z80"/>
+                                    <constraint firstAttribute="trailing" secondItem="YzE-Cl-HAy" secondAttribute="trailing" constant="8" id="d4h-79-eX8"/>
+                                    <constraint firstItem="YzE-Cl-HAy" firstAttribute="centerY" secondItem="ssb-Ux-obx" secondAttribute="centerY" id="nfD-Rh-AnH"/>
+                                    <constraint firstItem="ssb-Ux-obx" firstAttribute="centerY" secondItem="nWM-V3-pZ6" secondAttribute="centerY" id="ok0-ff-qli"/>
+                                    <constraint firstAttribute="width" constant="240" id="xhz-p1-aZX"/>
                                 </constraints>
-                                <state key="normal" title="Get the Time"/>
-                                <connections>
-                                    <action selector="getTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIP-km-gwr"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qs7-bc-ekt">
-                                <rect key="frame" x="-0.5" y="323" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AW2-Da-26i">
+                                <rect key="frame" x="67" y="425" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjM-AH-iQE">
+                                <rect key="frame" x="67" y="116" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.51673977619662015" green="0.70269548238835866" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="qs7-bc-ekt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VEO-g9-u80"/>
-                            <constraint firstItem="qs7-bc-ekt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c55-lj-ayE"/>
-                            <constraint firstItem="qs7-bc-ekt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cM4-1b-2py"/>
-                            <constraint firstItem="mT4-An-PCY" firstAttribute="top" secondItem="qs7-bc-ekt" secondAttribute="bottom" constant="76" id="hrd-wF-ujd"/>
-                            <constraint firstItem="mT4-An-PCY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="l3N-dk-yht"/>
-                            <constraint firstItem="mT4-An-PCY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mfn-xE-LsY"/>
+                            <constraint firstItem="nWM-V3-pZ6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="73F-RK-qhi"/>
+                            <constraint firstItem="PjM-AH-iQE" firstAttribute="height" secondItem="nWM-V3-pZ6" secondAttribute="height" id="ARq-dZ-th2"/>
+                            <constraint firstItem="PjM-AH-iQE" firstAttribute="centerX" secondItem="nWM-V3-pZ6" secondAttribute="centerX" id="aRG-Sa-Gi8"/>
+                            <constraint firstItem="AW2-Da-26i" firstAttribute="top" secondItem="nWM-V3-pZ6" secondAttribute="bottom" constant="28" id="d9I-8m-MQ3"/>
+                            <constraint firstItem="AW2-Da-26i" firstAttribute="height" secondItem="nWM-V3-pZ6" secondAttribute="height" id="dHN-W3-SDD"/>
+                            <constraint firstItem="AW2-Da-26i" firstAttribute="width" secondItem="nWM-V3-pZ6" secondAttribute="width" id="fYB-Lk-KJd"/>
+                            <constraint firstItem="PjM-AH-iQE" firstAttribute="width" secondItem="nWM-V3-pZ6" secondAttribute="width" id="kZk-VT-8ZK"/>
+                            <constraint firstItem="nWM-V3-pZ6" firstAttribute="top" secondItem="PjM-AH-iQE" secondAttribute="bottom" constant="25" id="lrj-cV-zP1"/>
+                            <constraint firstItem="nWM-V3-pZ6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xsz-fJ-V49"/>
+                            <constraint firstItem="AW2-Da-26i" firstAttribute="centerX" secondItem="nWM-V3-pZ6" secondAttribute="centerX" id="yck-Qe-ctk"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="getTimeButton" destination="mT4-An-PCY" id="gxD-Q3-uXa"/>
-                        <outlet property="timeLabel" destination="qs7-bc-ekt" id="Ujm-th-S9n"/>
+                        <outlet property="brownView" destination="YzE-Cl-HAy" id="Vd7-YM-vtI"/>
+                        <outlet property="greenView" destination="ssb-Ux-obx" id="tmn-L9-T1O"/>
+                        <outlet property="purpleView" destination="PjM-AH-iQE" id="bEV-6n-HKN"/>
+                        <outlet property="redView" destination="nWM-V3-pZ6" id="cPr-Gg-nCM"/>
+                        <outlet property="yellowView" destination="AW2-Da-26i" id="3ta-ud-n1z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
