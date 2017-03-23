@@ -1,0 +1,6 @@
+framework module Pods_BreathometerInterview {
+  umbrella header "Pods-BreathometerInterview-umbrella.h"
+
+  export *
+  module * { export * }
+}
