@@ -25,44 +25,38 @@ class ViewController: UIViewController {
     }
     
     func commonAncestor(_ view1: UIView, _ view2: UIView) -> UIView? {
-        if (view2.contains(viewInAncestor: view1)) {
-            return view1
-        }
         
-        var parent = view1.superview
+        var views = Set<UIView>()
+        var parent1: UIView? = view1
         
-        while (parent != nil) {
-            guard let parentView = parent else { return nil }
-            
-            if (view2.contains(viewInAncestor: parentView)) {
+        repeat {
+            guard let parentView = parent1 else { return nil }
+
+            if parentView == view2 {
                 return parentView
             }
             
-            parent = parentView.superview
-        }
+            views.insert(parentView)
+            parent1 = parentView.superview
+        } while(parent1 != nil)
+        
+        
+        var parent2: UIView? = view2
+
+        repeat {
+            guard let parentView = parent2 else { return nil }
+            
+            if views.contains(parentView) {
+                return parentView
+            }
+            
+            views.insert(parentView)
+            parent2 = parentView.superview
+        } while(parent2 != nil)
         
         return nil
     }
 }
-
-extension UIView {
-    func contains(viewInAncestor view: UIView) -> Bool {
-        if self == view {
-            return true
-        }
-        
-        var parent = self.superview
-        while parent != nil {
-            if parent! == view {
-                return true
-            }
-            parent = parent?.superview
-        }
-        
-        return false
-    }
-}
-
 
 
 
